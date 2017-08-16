@@ -34,17 +34,17 @@ class MyFirebaseInstance : AppCompatActivity(), View.OnClickListener {
             R.id.subscribeButton -> {
                 getInstance().subscribeToTopic("news")
                 Log.d(TAG, "SubscribeToTopic")
-                Toast.makeText(this@MyFirebaseInstance, "SubscribeToTopic", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "SubscribeToTopic", Toast.LENGTH_SHORT).show()
             }
             R.id.unsubscribeButton -> {
                 getInstance().unsubscribeFromTopic("news")
                 Log.d(TAG, "UnsubscribeFromTopic")
-                Toast.makeText(this@MyFirebaseInstance, "UnsubscribeFromTopic", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "UnsubscribeFromTopic", Toast.LENGTH_SHORT).show()
             }
             R.id.logTokenButton -> {
                 val token = FirebaseInstanceId.getInstance().token
                 Log.d(TAG, "Token : " + token!!)
-                Toast.makeText(this@MyFirebaseInstance, "Token : " + token, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Token : " + token, Toast.LENGTH_SHORT).show()
             }
         }
     }
