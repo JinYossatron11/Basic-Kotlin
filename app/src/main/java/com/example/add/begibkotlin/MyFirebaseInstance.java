@@ -9,6 +9,8 @@ import android.widget.Toast;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
+import static com.google.firebase.messaging.FirebaseMessaging.*;
+
 public class MyFirebaseInstance extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG = "MainActivity";
 
@@ -33,12 +35,12 @@ public class MyFirebaseInstance extends AppCompatActivity implements View.OnClic
 
             switch (view.getId()) {
                 case R.id.subscribeButton:
-                    FirebaseMessaging.getInstance().subscribeToTopic("droiddev/news");
+                    getInstance().subscribeToTopic("news");
                     Log.d(TAG, "SubscribeToTopic");
                     Toast.makeText(MyFirebaseInstance.this, "SubscribeToTopic", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.unsubscribeButton:
-                    FirebaseMessaging.getInstance().unsubscribeFromTopic("droiddev/news");
+                    getInstance().unsubscribeFromTopic("news");
                     Log.d(TAG, "UnsubscribeFromTopic");
                     Toast.makeText(MyFirebaseInstance.this, "UnsubscribeFromTopic", Toast.LENGTH_SHORT).show();
                     break;
