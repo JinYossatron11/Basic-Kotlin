@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.add.begibkotlin.MyFirebaseInstance">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginBottom="8dp"
+        android:layout_above="@+id/logTokenButton"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:id="@+id/logTokenButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="show token"
+        android:layout_centerInParent="true"
+        android:onClick="show token"
+        />
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_below="@+id/logTokenButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        >
+
+        <Button
+            android:id="@+id/subscribeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="subscribe(news)"
+            android:onClick="subscribe"
+            />
+        <Button
+            android:id="@+id/unsubscribeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="unsubsribe(news)"
+            android:onClick="unsubsrcibe"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="qweqweqweqweqweqweqwewqeqweq"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
