@@ -9,6 +9,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.media.RingtoneManager
+import android.net.Uri
 import android.support.v4.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -59,6 +60,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         notificationBuilder.setDefaults(Notification.DEFAULT_VIBRATE)
         notificationBuilder.setLights(Color.YELLOW, 1000, 300)
+        notificationBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
+        notificationBuilder.setDefaults(Notification.DEFAULT_SOUND)
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(0, notificationBuilder.build())
