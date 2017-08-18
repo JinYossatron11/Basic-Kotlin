@@ -16,29 +16,16 @@ import java.io.IOException
 import java.net.URL
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
-    /**
-     * Called when message is received.
-     *
-     * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
-     */
+
     override fun onMessageReceived(remoteMessage: RemoteMessage?) {
         super.onMessageReceived(remoteMessage)
-        // TODO(developer): Handle FCM messages here.
-        // If the application is in the foreground handle both data and notification messages here.
-        // Also if you intend on generating your own notifications as a result of a received FCM
-        // message, here is where that should be initiated. See sendNotification method below.
+
         val notification = remoteMessage!!.notification
         val data = remoteMessage.data
 
         sendNotification(notification, data)
     }
 
-    /**
-     * Create and show a custom notification containing the received FCM message.
-     *
-     * @param notification FCM notification payload received.
-     * @param data FCM data payload received.
-     */
     private fun sendNotification(notification: RemoteMessage.Notification, data: Map<String, String>) {
         val icon = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
 
