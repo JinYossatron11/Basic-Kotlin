@@ -15,6 +15,9 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import java.io.IOException
 import java.net.URL
+import com.example.add.begibkotlin.R.mipmap.ic_launcher
+
+
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
@@ -28,22 +31,19 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     }
 
     private fun sendNotification(notification: RemoteMessage.Notification, data: Map<String, String>) {
-        val icon = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
 
         val intent = Intent(this, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
         val notificationBuilder = NotificationCompat.Builder(this)
                 .setContentTitle(notification.title)
                 .setContentText(notification.body)
                 .setAutoCancel(true)
-                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setContentIntent(pendingIntent)
-                .setContentInfo(notification.title)
-                .setLargeIcon(icon)
-                .setColor(Color.RED)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(getNotificationIcon())
+
+
 
         try {
             val picture_url = data["picture_url"]
@@ -58,12 +58,19 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             e.printStackTrace()
         }
 
-        notificationBuilder.setDefaults(Notification.DEFAULT_VIBRATE)
-        notificationBuilder.setLights(Color.YELLOW, 1000, 300)
-        notificationBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
-        notificationBuilder.setDefaults(Notification.DEFAULT_SOUND)
+//        notificationBuilder.setDefaults(Notification.DEFAULT_VIBRATE)
+//        notificationBuilder.setLights(Color.YELLOW, 1000, 300)
+//        notificationBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
+//        notificationBuilder.setDefaults(Notification.DEFAULT_SOUND)
+        notificationBuilder.addAction(R.mipmap.ic_launcher, "", pendingIntent )
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(0, notificationBuilder.build())
     }
+
+    private fun getNotificationIcon(): Int {
+        val useWhiteIcon = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP
+        return if (useWhiteIcon) R.drawable.notification_bg else R.mipmap.ic_launcher
+    }
 }
+
