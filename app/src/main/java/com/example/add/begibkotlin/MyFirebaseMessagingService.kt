@@ -36,12 +36,14 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
+
         val notificationBuilder = NotificationCompat.Builder(this)
                 .setContentTitle(notification.title)
                 .setContentText(notification.body)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent)
-                .setSmallIcon(getNotificationIcon())
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
 
 
 
@@ -62,15 +64,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 //        notificationBuilder.setLights(Color.YELLOW, 1000, 300)
 //        notificationBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
 //        notificationBuilder.setDefaults(Notification.DEFAULT_SOUND)
-        notificationBuilder.addAction(R.mipmap.ic_launcher, "", pendingIntent )
+
+
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(0, notificationBuilder.build())
     }
 
-    private fun getNotificationIcon(): Int {
-        val useWhiteIcon = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP
-        return if (useWhiteIcon) R.drawable.notification_bg else R.mipmap.ic_launcher
-    }
 }
 
