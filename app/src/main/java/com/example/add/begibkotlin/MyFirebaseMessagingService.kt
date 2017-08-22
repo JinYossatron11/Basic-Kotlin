@@ -42,10 +42,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setContentText(notification.body)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.mipmap.anonymous_new)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.anonymous));
-
-
 
         try {
             val picture_url = data["picture_url"]
