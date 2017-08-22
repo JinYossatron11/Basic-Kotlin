@@ -15,7 +15,9 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import java.io.IOException
 import java.net.URL
-import com.example.add.begibkotlin.R.mipmap.ic_launcher
+import android.widget.RemoteViews
+
+
 
 
 
@@ -27,43 +29,32 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val notification = remoteMessage!!.notification
         val data = remoteMessage.data
 
-        sendNotification(notification, data)
+        sendNotification(remoteMessage)
     }
 
-    private fun sendNotification(notification: RemoteMessage.Notification, data: Map<String, String>) {
+    private fun sendNotification(remoteMessage: RemoteMessage) {
 
-        val intent = Intent(this, MainActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        val notificationPayload = remoteMessage.notification
+        val dataPayload = remoteMessage.data
 
+        val notificationMessageStyle = NotificationCompat.MessagingStyle(getString(R.string.app_name))
+        notificationMessageStyle.conversationTitle = getString(R.string.news_feed)
 
+        val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this)
-                .setContentTitle(notification.title)
-                .setContentText(notification.body)
+                .setContentTitle(notificationPayload.title)
+                .setContentText(notificationPayload.body)
                 .setAutoCancel(true)
-                .setContentIntent(pendingIntent)
                 .setSmallIcon(R.mipmap.anonymous_new)
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.anonymous));
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.anonymous))
+                .setColor(Color.parseColor("#00a3dc"))
+                .setSound(defaultSoundUri)
 
-        try {
-            val picture_url = data["picture_url"]
-            if (picture_url != null && "" != picture_url) {
-                val url = URL(picture_url)
-                val bigPicture = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-                notificationBuilder.setStyle(
-                        NotificationCompat.BigPictureStyle().bigPicture(bigPicture).setSummaryText(notification.body)
-                )
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
 
 //        notificationBuilder.setDefaults(Notification.DEFAULT_VIBRATE)
 //        notificationBuilder.setLights(Color.YELLOW, 1000, 300)
 //        notificationBuilder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
 //        notificationBuilder.setDefaults(Notification.DEFAULT_SOUND)
-
-
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(0, notificationBuilder.build())
