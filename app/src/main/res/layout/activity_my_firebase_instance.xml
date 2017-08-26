@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.add.begibkotlin.MyFirebaseInstance"
+    tools:context="com.example.add.begibkotlin.notifirebase.MyFirebaseInstance"
     android:id="@+id/wwww">
     <ImageView
         android:id="@+id/img"

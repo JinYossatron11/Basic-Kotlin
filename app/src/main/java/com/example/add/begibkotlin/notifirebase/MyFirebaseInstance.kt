@@ -1,13 +1,13 @@
-package com.example.add.begibkotlin
+package com.example.add.begibkotlin.notifirebase
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.example.add.begibkotlin.R
 
 import com.google.firebase.iid.FirebaseInstanceId
-import com.google.firebase.messaging.FirebaseMessaging
 
 import com.google.firebase.messaging.FirebaseMessaging.*
 
