@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin
+package com.example.add.begibkotlin.coursepeewee
 
 fun main(args: Array<String>) {
     val language = if (args.size == 0) "FN" else args[0]

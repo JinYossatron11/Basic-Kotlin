@@ -1,8 +1,9 @@
-package com.example.add.begibkotlin
+package com.example.add.begibkotlin.coursepeewee
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import com.example.add.begibkotlin.R
 
 class MainActivity : AppCompatActivity() {
 

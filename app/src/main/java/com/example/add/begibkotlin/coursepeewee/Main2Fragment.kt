@@ -1,13 +1,13 @@
-package com.example.add.begibkotlin
+package com.example.add.begibkotlin.coursepeewee
 
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.add.begibkotlin.R
 
 class Main2Fragment : Fragment() {
 

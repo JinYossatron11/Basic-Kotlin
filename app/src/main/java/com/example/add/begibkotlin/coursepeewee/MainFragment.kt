@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin
+package com.example.add.begibkotlin.coursepeewee
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import com.example.add.begibkotlin.R
 
 
 class MainFragment : Fragment() {
@@ -33,7 +34,7 @@ class MainFragment : Fragment() {
         return view
     }
 
-    fun getMainActivity():MainActivity {
+    fun getMainActivity(): MainActivity {
         return activity as MainActivity
     }
 

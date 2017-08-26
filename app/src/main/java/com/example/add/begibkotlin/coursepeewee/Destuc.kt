@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin
+package com.example.add.begibkotlin.coursepeewee
 
  fun main(args : Array<String>) {
   val pair = Pair(20 , "Todsphol")

@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin;
+package com.example.add.begibkotlin.coursepeewee;
 
 
 public class LoginJava {
