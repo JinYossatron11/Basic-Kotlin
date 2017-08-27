@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin.coursepeewee
+package com.example.add.begibkotlin.coursepeewee.fragment
 
 
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
+import com.example.add.begibkotlin.coursepeewee.toText
 
 
 class MainFragment : Fragment() {
