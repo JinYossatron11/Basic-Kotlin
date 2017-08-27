@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin.coursepeewee
+package com.example.add.begibkotlin.coursepeewee.manager
 
 import android.os.Parcel
 import android.os.Parcelable
