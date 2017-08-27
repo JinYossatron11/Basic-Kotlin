@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import com.example.add.begibkotlin.R
-import com.example.add.begibkotlin.coursepeewee.manager.activity.MainActivity
+import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
 
 
 class MainFragment : Fragment() {

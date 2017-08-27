@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin.coursepeewee.manager.activity
+package com.example.add.begibkotlin.coursepeewee.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
