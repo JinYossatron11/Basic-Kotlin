@@ -21,6 +21,7 @@
         android:id="@+id/btn_Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:text="Submit"
+        style="@style/ButtonBlue"/>
 
 </LinearLayout>
