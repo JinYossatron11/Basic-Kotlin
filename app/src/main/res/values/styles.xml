@@ -45,7 +45,12 @@
 
     <style name="PasswordEditText">
         <item name="android:inputType">numberPassword</item>
-
+        <item name="android:drawableLeft">@drawable/ic_password</item>
+        <item name="android:drawableRight">@drawable/ic_password</item>
+        <item name="android:maxLength">6</item>
+        <item name="android:digits">0123456789</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">16dp</item>
     </style>
 
     <style name="ButtonBase" parent="Button">
