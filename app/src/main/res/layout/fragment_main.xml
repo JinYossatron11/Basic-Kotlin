@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,19 +10,22 @@
         android:id="@+id/edt_Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/PhoneEditText"/>
+        style="@style/PhoneEditText"
+        android:layout_centerInParent="true"/>
 
     <EditText
         android:id="@+id/edt_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        style="@style/PasswordEditText"/>
+        style="@style/PasswordEditText"
+        android:layout_below="@+id/edt_Username"/>
     <Button
         android:id="@+id/btn_Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
-        style="@style/ButtonBlue"/>
+        style="@style/ButtonBlue"
+        android:layout_below="@+id/edt_Password"/>
 
-</LinearLayout>
+</RelativeLayout>
