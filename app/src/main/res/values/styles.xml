@@ -43,6 +43,10 @@
         <item name="android:hint">@string/phone_number</item>
     </style>>
 
+    <style name="PasswordEditText">
+        <item name="android:inputType">numberPassword</item>
+
+    </style>
 
     <style name="ButtonBase" parent="Button">
         <item name="android:textSize">@dimen/textSize</item>
