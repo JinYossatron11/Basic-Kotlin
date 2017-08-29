@@ -34,8 +34,13 @@
 
     <style name="PhoneEditText" parent="EditText">
         <item name="android:inputType">phone</item>
-        <item name="android:drawableLeft">@drawable/anonymous</item>
-        <item name="android:drawableRight"></item>
+        <item name="android:drawableLeft">@drawable/ic_phone</item>
+        <item name="android:drawableRight">@drawable/ic_phone</item>
+        <item name="maxLines">1</item>
+        <item name="android:digits">0,1,2,3,4,5,6,7,8,9,-</item>
+        <item name="maxLength">12</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:hint">@string/phone_number</item>
     </style>>
 
 
