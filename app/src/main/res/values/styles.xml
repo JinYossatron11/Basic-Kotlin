@@ -32,6 +32,13 @@
 
     </style>
 
+    <style name="PhoneEditText" parent="EditText">
+        <item name="android:inputType">phone</item>
+        <item name="android:drawableLeft">@drawable/anonymous</item>
+        <item name="android:drawableRight"></item>
+    </style>>
+
+
     <style name="ButtonBase" parent="Button">
         <item name="android:textSize">@dimen/textSize</item>
         <item name="android:foreground">?selectableItemBackground</item>
