@@ -25,7 +25,7 @@
         android:id="@+id/btn_Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="เข้าสู่ระบบ"
         style="@style/ButtonBlue"
         android:layout_below="@+id/edt_Password"/>
 
