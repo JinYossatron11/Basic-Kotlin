@@ -18,7 +18,7 @@
         <item name="android:layout_marginTop">@dimen/dp4</item>
         <item name="android:layout_marginLeft">@dimen/dp8</item>
         <item name="android:layout_marginRight">@dimen/dp8</item>
-        <item name="android:background">@drawable/z_selector_rectangle</item>
+        <item name="android:background">@drawable/c_selector_rectangle</item>
         <item name="android:textColor">@color/z_states_text_view_text_color</item>
     </style>
 
@@ -28,7 +28,7 @@
     </style>
 
     <style name="EditTextWithStroke" parent="EditText">
-        <item name="android:background">@drawable/z_stroke</item>
+        <item name="android:background">@drawable/c_stroke</item>
 
     </style>
 
@@ -60,7 +60,7 @@
     </style>
 
     <style name="ButtonBlue" parent="ButtonBase">
-        <item name="android:background">@drawable/z_selector_button_blue</item>
+        <item name="android:background">@drawable/c_selector_button_blue</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 </resources>
