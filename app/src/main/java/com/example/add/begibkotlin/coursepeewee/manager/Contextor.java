@@ -2,10 +2,6 @@ package com.example.add.begibkotlin.coursepeewee.manager;
 
 import android.content.Context;
 
-/**
- * Created by add on 31/8/2560.
- */
-
 public class Contextor {
     private static Contextor contextor;
 

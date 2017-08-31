@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import com.example.add.begibkotlin.R
@@ -19,7 +20,6 @@ class MainFragment : Fragment() {
     lateinit var edtUsername : EditText
     lateinit var edtPassword : EditText
     lateinit var btnSubmit   : Button
-    lateinit var bg : ImageView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -28,6 +28,7 @@ class MainFragment : Fragment() {
         edtUsername = view.findViewById(R.id.edt_Username)
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit   = view.findViewById(R.id.btn_Submit)
+
 
         btnSubmit.setOnClickListener {
             val username = edtUsername.toText()
