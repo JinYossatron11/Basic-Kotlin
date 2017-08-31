@@ -1,11 +1,13 @@
 package com.example.add.begibkotlin.notifirebase
 
+import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.add.begibkotlin.R
+import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
 
 import com.google.firebase.iid.FirebaseInstanceId
 
@@ -35,6 +37,7 @@ class MyFirebaseInstance : AppCompatActivity(), View.OnClickListener {
                 getInstance().subscribeToTopic("news")
                 Log.d(TAG, "SubscribeToTopic")
                 Toast.makeText(this, "SubscribeToTopic", Toast.LENGTH_SHORT).show()
+
             }
             R.id.unsubscribeButton -> {
                 getInstance().unsubscribeFromTopic("news")
