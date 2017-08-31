@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
 import com.example.add.begibkotlin.coursepeewee.toText
@@ -18,6 +19,7 @@ class MainFragment : Fragment() {
     lateinit var edtUsername : EditText
     lateinit var edtPassword : EditText
     lateinit var btnSubmit   : Button
+    lateinit var bg : ImageView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

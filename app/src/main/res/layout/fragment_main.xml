@@ -6,6 +6,12 @@
     tools:context="com.example.add.begibkotlin.coursepeewee.fragment.MainFragment">
 
 
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/anonymous"/>
+
     <EditText
         android:id="@+id/edt_Username"
         android:layout_width="match_parent"

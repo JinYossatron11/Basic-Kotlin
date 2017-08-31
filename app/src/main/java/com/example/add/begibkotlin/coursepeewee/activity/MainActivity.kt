@@ -1,5 +1,6 @@
 package com.example.add.begibkotlin.coursepeewee.activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,11 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commit()
     }
-
     fun changeFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
@@ -32,5 +29,6 @@ class MainActivity : AppCompatActivity() {
         }
         return false
     }
+
 }
 
