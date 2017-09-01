@@ -4,11 +4,35 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.add.begibkotlin.coursepeewee.fragment.MainFragment">
-    <FrameLayout
-        android:id="@+id/container"
+    <EditText
+        android:id="@+id/edt_Username"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        style="@style/PhoneEditText"
+        android:layout_centerInParent="true"
+        android:imeOptions="actionNext"/>
 
-    </FrameLayout>
+    <EditText
+        android:id="@+id/edt_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        style="@style/PasswordEditText"
+        android:layout_below="@+id/cb_login" />
+    <Button
+        android:id="@+id/btn_Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เข้าสู่ระบบ"
+        style="@style/ButtonBlue"
+        android:layout_below="@+id/edt_Password"/>
+
+    <CheckBox
+        android:id="@+id/cb_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="จำเบอร์โทรศัทพ์"
+        android:layout_alignRight="@+id/edt_Username"
+        android:layout_below="@+id/edt_Username"/>
 
 </RelativeLayout>

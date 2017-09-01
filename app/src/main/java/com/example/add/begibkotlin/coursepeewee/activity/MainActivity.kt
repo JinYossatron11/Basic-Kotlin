@@ -14,14 +14,16 @@ import com.example.add.begibkotlin.coursepeewee.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
-    @BindView(R.id.edt_Username) lateinit var edtUsername : EditText
-    @BindView(R.id.edt_Password) lateinit var edtPassword : EditText
-    @BindView(R.id.btn_Submit)   lateinit var btnLogin    : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.container, MainFragment.newInstance())
+                .commit()
+
     }
+
     fun changeFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
