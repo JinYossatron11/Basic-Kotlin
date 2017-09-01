@@ -5,11 +5,18 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.EditText
+import butterknife.BindView
+import butterknife.ButterKnife
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
+    @BindView(R.id.edt_Username) lateinit var edtUsername : EditText
+    @BindView(R.id.edt_Password) lateinit var edtPassword : EditText
+    @BindView(R.id.btn_Submit)   lateinit var btnLogin    : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,6 +27,8 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, fragment)
                 .addToBackStack(null)
                 .commit()
+        ButterKnife.bind(this)
+
     }
 
     fun startFragment() {
