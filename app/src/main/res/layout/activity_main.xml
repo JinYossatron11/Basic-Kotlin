@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".coursepeewee.activity.MainActivity">
 
-    <FrameLayout
-        android:id="@+id/container"
+    <EditText
+        android:id="@+id/edt_Username"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PhoneEditText"
+        android:layout_centerInParent="true"
+        android:imeOptions="actionNext"/>
 
+    <EditText
+        android:id="@+id/edt_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        style="@style/PasswordEditText"
+        android:layout_below="@+id/edt_Username"/>
+    <Button
+        android:id="@+id/btn_Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เข้าสู่ระบบ"
+        style="@style/ButtonBlue"
+        android:layout_below="@+id/edt_Password"/>
 
-        />
-
-
-</LinearLayout>
+</RelativeLayout>
