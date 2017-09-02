@@ -27,13 +27,13 @@ class MainFragment : Fragment() {
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit   = view.findViewById(R.id.btn_Submit)
 
-
         btnSubmit.setOnClickListener {
             val username = edtUsername.toText()
             val password = edtPassword.toText()
 
             getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
         }
+
         return view
     }
 
