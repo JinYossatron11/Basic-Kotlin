@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin.view;
+package com.example.add.begibkotlin.coursepeewee.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,8 +7,8 @@ import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 
 import com.example.add.begibkotlin.R;
-import com.example.add.begibkotlin.util.MultiLanguageUtil;
-import com.example.add.begibkotlin.util.TypefaceUtil;
+import com.example.add.begibkotlin.coursepeewee.util.MultiLanguageUtil;
+import com.example.add.begibkotlin.coursepeewee.util.TypefaceUtil;
 
 public class CustomCheckBox extends AppCompatCheckBox{
     public CustomCheckBox(Context context) {

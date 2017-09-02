@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin.util;
+package com.example.add.begibkotlin.coursepeewee.util;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -7,8 +7,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.example.add.begibkotlin.R;
-import com.example.add.begibkotlin.view.CustomCacheFont;
+import com.example.add.begibkotlin.coursepeewee.view.CustomCacheFont;
 
 public class TypefaceUtil {
 

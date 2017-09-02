@@ -1,10 +1,10 @@
-package com.example.add.begibkotlin.view;
+package com.example.add.begibkotlin.coursepeewee.view;
 
 
 import android.content.Context;
 import android.graphics.Typeface;
 
-import com.example.add.begibkotlin.util.TypefaceUtil;
+import com.example.add.begibkotlin.coursepeewee.util.TypefaceUtil;
 
 import java.util.Hashtable;
 

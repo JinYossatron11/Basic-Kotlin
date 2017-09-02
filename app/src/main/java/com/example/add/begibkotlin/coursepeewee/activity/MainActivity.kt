@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        ButterKnife.bind(this)
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
                 .commit()
@@ -29,9 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun startFragment() {
+    fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .add(R.id.container, fragment)
+                .addToBackStack(null)
                 .commit()
     }
 

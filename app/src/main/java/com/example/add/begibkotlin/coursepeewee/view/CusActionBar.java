@@ -1,11 +1,11 @@
-package com.example.add.begibkotlin.view;
+package com.example.add.begibkotlin.coursepeewee.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 
-import com.example.add.begibkotlin.util.Constant;
+import com.example.add.begibkotlin.coursepeewee.util.Constant;
 
 
 public class CusActionBar extends Toolbar{

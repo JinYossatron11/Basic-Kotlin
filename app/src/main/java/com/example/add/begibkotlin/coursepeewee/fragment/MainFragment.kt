@@ -8,6 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import butterknife.BindView
+import butterknife.ButterKnife
+import butterknife.OnClick
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
 import com.example.add.begibkotlin.coursepeewee.toText
@@ -15,25 +19,14 @@ import com.example.add.begibkotlin.coursepeewee.toText
 
 class MainFragment : Fragment() {
 
-    lateinit var edtUsername : EditText
-    lateinit var edtPassword : EditText
-    lateinit var btnSubmit   : Button
+    @BindView(R.id.edt_Username)lateinit var edtUsername : EditText
+    @BindView(R.id.edt_Password)lateinit var edtPassword : EditText
+    @BindView(R.id.tv) lateinit var tvText : TextView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view =  inflater!!.inflate(R.layout.fragment_main, container, false)
-
-        edtUsername = view.findViewById(R.id.edt_Username)
-        edtPassword = view.findViewById(R.id.edt_Password)
-        btnSubmit   = view.findViewById(R.id.btn_Submit)
-
-        btnSubmit.setOnClickListener {
-            val username = edtUsername.toText()
-            val password = edtPassword.toText()
-
-            getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
-        }
-
+        ButterKnife.bind(this, view)
         return view
     }
 
@@ -41,6 +34,13 @@ class MainFragment : Fragment() {
         return activity as MainActivity
     }
 
+    @OnClick(R.id.btn_Submit) fun onClickLogin() {
+            val username = edtUsername.toText()
+            val password = edtPassword.toText()
+
+            getMainActivity().replaceFragment(Main2Fragment.newInstance(username, password))
+
+    }
 
     companion object {
         fun newInstance(): MainFragment {

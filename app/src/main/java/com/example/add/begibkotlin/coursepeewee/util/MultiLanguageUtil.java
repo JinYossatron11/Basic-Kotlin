@@ -1,4 +1,4 @@
-package com.example.add.begibkotlin.util;
+package com.example.add.begibkotlin.coursepeewee.util;
 
 import android.content.res.TypedArray;
 import android.util.Log;
