@@ -11,6 +11,7 @@ import com.example.add.begibkotlin.util.Constant;
 public class CusActionBar extends Toolbar{
     public CusActionBar(Context context) {
         super(context);
+        init();
     }
 
     public CusActionBar(Context context, @Nullable AttributeSet attrs) {
