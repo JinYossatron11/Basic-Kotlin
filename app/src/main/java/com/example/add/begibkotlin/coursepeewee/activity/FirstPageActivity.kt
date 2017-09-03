@@ -7,7 +7,7 @@ import butterknife.ButterKnife
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.fragment.FirstPageFragment
 
-class MainActivity : AppCompatActivity() {
+class FirstPageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

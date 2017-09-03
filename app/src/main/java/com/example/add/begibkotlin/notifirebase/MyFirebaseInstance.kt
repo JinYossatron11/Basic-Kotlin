@@ -1,14 +1,11 @@
 package com.example.add.begibkotlin.notifirebase
 
-import android.app.Activity
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.add.begibkotlin.R
-import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
 
 import com.google.firebase.iid.FirebaseInstanceId
 
@@ -54,6 +51,6 @@ class MyFirebaseInstance : AppCompatActivity(), View.OnClickListener {
     }
 
     companion object {
-        private val TAG = "MainActivity"
+        private val TAG = "FirstPageActivity"
     }
 }

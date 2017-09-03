@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import butterknife.OnClick
 import com.example.add.begibkotlin.R
-import com.example.add.begibkotlin.coursepeewee.activity.MainActivity
+import com.example.add.begibkotlin.coursepeewee.activity.FirstPageActivity
 import com.example.add.begibkotlin.coursepeewee.toText
 
 
@@ -30,8 +30,8 @@ class FirstPageFragment : Fragment() {
         return view
     }
 
-    fun getMainActivity(): MainActivity {
-        return activity as MainActivity
+    fun getMainActivity(): FirstPageActivity {
+        return activity as FirstPageActivity
     }
 
     @OnClick(R.id.btn_Submit) fun onClickLogin() {
