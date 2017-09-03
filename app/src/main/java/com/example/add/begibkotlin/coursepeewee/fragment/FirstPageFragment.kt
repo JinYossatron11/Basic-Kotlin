@@ -22,7 +22,7 @@ class FirstPageFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater!!.inflate(R.layout.fragment_main, container, false)
+        val view = inflater!!.inflate(R.layout.fragment_first_page, container, false)
         edtUsername = view.findViewById(R.id.edt_Username)
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit = view.findViewById(R.id.btn_Submit)
