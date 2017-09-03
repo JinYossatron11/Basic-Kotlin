@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import butterknife.BindView
 import butterknife.OnClick
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.activity.FirstPageActivity
@@ -19,6 +21,7 @@ class FirstPageFragment : Fragment() {
     lateinit var edtUsername: EditText
     lateinit var edtPassword: EditText
     lateinit var btnSubmit: Button
+    lateinit var vImageBackground : ImageView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -26,7 +29,9 @@ class FirstPageFragment : Fragment() {
         edtUsername = view.findViewById(R.id.edt_Username)
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit = view.findViewById(R.id.btn_Submit)
+        vImageBackground = view.findViewById(R.id.bg)
 
+        vImageBackground.setBackgroundResource(R.drawable.shoot)
         return view
     }
 

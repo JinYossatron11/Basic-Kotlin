@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.add.begibkotlin.coursepeewee.fragment.FirstPageFragment">
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        />
     <EditText
         android:id="@+id/edt_Username"
         android:layout_width="match_parent"
@@ -41,12 +48,5 @@
         android:text="qweqweqweqweqweqweq"
         android:layout_below="@id/btn_Submit"
         android:layout_centerHorizontal="true"/>
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        />
 
 </RelativeLayout>
