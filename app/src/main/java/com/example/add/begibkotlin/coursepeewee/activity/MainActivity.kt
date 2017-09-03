@@ -1,13 +1,11 @@
 package com.example.add.begibkotlin.coursepeewee.activity
 
-import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.Toolbar
 import butterknife.ButterKnife
 import com.example.add.begibkotlin.R
-import com.example.add.begibkotlin.coursepeewee.fragment.MainFragment
+import com.example.add.begibkotlin.coursepeewee.fragment.FirstPageFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         ButterKnife.bind(this)
         supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .replace(R.id.container, FirstPageFragment.newInstance())
                 .commit()
     }
 
