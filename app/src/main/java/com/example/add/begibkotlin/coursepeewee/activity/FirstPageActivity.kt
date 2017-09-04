@@ -15,7 +15,6 @@ class FirstPageActivity : AppCompatActivity() {
         ButterKnife.bind(this)
 
         initFragment()
-
     }
 
     fun initFragment() {

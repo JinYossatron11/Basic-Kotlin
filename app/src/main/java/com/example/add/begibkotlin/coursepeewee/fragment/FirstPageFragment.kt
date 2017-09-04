@@ -13,6 +13,7 @@ import android.widget.ImageView
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.bumptech.glide.Glide
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.activity.FirstPageActivity
 import com.example.add.begibkotlin.coursepeewee.toText
@@ -33,7 +34,8 @@ class FirstPageFragment : Fragment() {
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit = view.findViewById(R.id.btn_Submit)
         vImageBackground = view.findViewById(R.id.bg)
-        vImageBackground.setBackgroundResource(R.drawable.shoot)
+
+        Glide.with(this).load(R.drawable.shoot).crossFade().into(vImageBackground)
 
         return view
     }
