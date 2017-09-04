@@ -32,7 +32,8 @@
         android:layout_height="wrap_content"
         android:text="เข้าสู่ระบบ"
         style="@style/ButtonBlue"
-        android:layout_below="@+id/edt_Password"/>
+        android:layout_below="@+id/edt_Password"
+        android:layout_marginTop="@dimen/dp8"/>
 
     <CheckBox
         android:id="@+id/cb_login"
@@ -47,6 +48,6 @@
         android:layout_height="wrap_content"
         android:text="qweqweqweqweqweqweq"
         android:layout_below="@id/btn_Submit"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
