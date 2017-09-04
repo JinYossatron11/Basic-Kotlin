@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import butterknife.BindView
+import butterknife.ButterKnife
 import butterknife.OnClick
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.coursepeewee.activity.FirstPageActivity
@@ -27,6 +28,7 @@ class FirstPageFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_first_page, container, false)
+        ButterKnife.bind(this,view)
         edtUsername = view.findViewById(R.id.edt_Username)
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit = view.findViewById(R.id.btn_Submit)
