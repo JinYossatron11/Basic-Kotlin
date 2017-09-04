@@ -13,6 +13,12 @@ class FirstPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_page)
         ButterKnife.bind(this)
+
+        initFragment()
+
+    }
+
+    fun initFragment() {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, FirstPageFragment.newInstance())
                 .commit()
@@ -23,8 +29,6 @@ class FirstPageActivity : AppCompatActivity() {
                 .replace(R.id.container, fragment)
                 .addToBackStack(null)
                 .commit()
-        ButterKnife.bind(this)
-
     }
 
     fun replaceFragment(fragment: Fragment) {

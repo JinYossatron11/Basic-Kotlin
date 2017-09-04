@@ -6,7 +6,6 @@
     android:fillViewport="true">
 
     <RelativeLayout
-        android:id="@+id/rootLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
@@ -57,5 +56,5 @@
         android:layout_below="@id/btn_Submit"
         android:layout_centerHorizontal="true" />
 
-</RelativeLayout>
+    </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

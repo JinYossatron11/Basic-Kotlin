@@ -3,6 +3,7 @@ package com.example.add.begibkotlin.coursepeewee.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.ActionBar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,8 +31,8 @@ class FirstPageFragment : Fragment() {
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit = view.findViewById(R.id.btn_Submit)
         vImageBackground = view.findViewById(R.id.bg)
-
         vImageBackground.setBackgroundResource(R.drawable.shoot)
+
         return view
     }
 
