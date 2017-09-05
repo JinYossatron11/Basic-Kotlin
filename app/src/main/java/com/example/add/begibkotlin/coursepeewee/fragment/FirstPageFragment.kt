@@ -40,9 +40,7 @@ class FirstPageFragment : Fragment() {
         return view
     }
 
-    fun getMainActivity(): FirstPageActivity {
-        return activity as FirstPageActivity
-    }
+    fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
 
     @OnClick(R.id.btn_Submit) fun onClickLogin() {
         val username = edtUsername.toText()
