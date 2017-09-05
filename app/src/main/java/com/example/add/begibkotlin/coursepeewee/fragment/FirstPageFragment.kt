@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
+import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.bumptech.glide.Glide
@@ -24,6 +26,7 @@ class FirstPageFragment : Fragment() {
     lateinit var edtPassword: EditText
     lateinit var btnSubmit: Button
     lateinit var vImageBackground : ImageView
+    lateinit var tvShow : TextView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -33,20 +36,15 @@ class FirstPageFragment : Fragment() {
         edtPassword = view.findViewById(R.id.edt_Password)
         btnSubmit = view.findViewById(R.id.btn_Submit)
         vImageBackground = view.findViewById(R.id.bg)
-
         Glide.with(this).load(R.drawable.shoot).crossFade().into(vImageBackground)
-
-        return view
-    }
-
-    fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
-
-    @OnClick(R.id.btn_Submit) fun onClickLogin() {
         val username = edtUsername.toText()
         val password = edtPassword.toText()
 
         getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
+        return view
     }
+
+    fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
 
     companion object {
         fun newInstance(): FirstPageFragment {
