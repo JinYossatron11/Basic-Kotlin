@@ -29,7 +29,7 @@
         android:id="@+id/edt_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="รหัสผ่าน"
         style="@style/PasswordEditText"
         android:layout_below="@+id/cb_login" />
     <Button
@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="จำเบอร์โทรศัทพ์"
         android:layout_alignRight="@+id/edt_Username"
+        android:layout_alignEnd="@+id/edt_Username"
         android:layout_below="@+id/edt_Username"/>
     <TextView
         android:id="@+id/tv"
