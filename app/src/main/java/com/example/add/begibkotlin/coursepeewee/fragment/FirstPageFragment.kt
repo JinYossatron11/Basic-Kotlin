@@ -22,29 +22,30 @@ import com.example.add.begibkotlin.coursepeewee.toText
 
 class FirstPageFragment : Fragment() {
 
-    lateinit var edtUsername: EditText
-    lateinit var edtPassword: EditText
-    lateinit var btnSubmit: Button
-    lateinit var vImageBackground : ImageView
-    lateinit var tvShow : TextView
+    @BindView(R.id.edt_Username)lateinit var edtUsername: EditText
+    @BindView(R.id.edt_Password)lateinit var edtPassword: EditText
+    @BindView(R.id.btn_Submit)lateinit var btnSubmit: Button
+    @BindView(R.id.bg)lateinit var vImageBackground : ImageView
+    @BindView(R.id.tv)lateinit var tvShow : TextView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_first_page, container, false)
         ButterKnife.bind(this,view)
-        edtUsername = view.findViewById(R.id.edt_Username)
-        edtPassword = view.findViewById(R.id.edt_Password)
-        btnSubmit = view.findViewById(R.id.btn_Submit)
-        vImageBackground = view.findViewById(R.id.bg)
         Glide.with(this).load(R.drawable.shoot).crossFade().into(vImageBackground)
-        val username = edtUsername.toText()
-        val password = edtPassword.toText()
 
-        getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
+        tvShow.setText("")
         return view
     }
 
     fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
+
+    fun nextPage() {
+        val username = edtUsername.toText()
+        val password = edtPassword.toText()
+
+        getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
+    }
 
     companion object {
         fun newInstance(): FirstPageFragment {
