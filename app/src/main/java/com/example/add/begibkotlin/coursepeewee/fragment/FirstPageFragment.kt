@@ -26,15 +26,12 @@ class FirstPageFragment : Fragment() {
     @BindView(R.id.edt_Password)lateinit var edtPassword: EditText
     @BindView(R.id.btn_Submit)lateinit var btnSubmit: Button
     @BindView(R.id.bg)lateinit var vImageBackground : ImageView
-    @BindView(R.id.tv)lateinit var tvShow : TextView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_first_page, container, false)
         ButterKnife.bind(this,view)
         Glide.with(this).load(R.drawable.shoot).crossFade().into(vImageBackground)
-
-        tvShow.setText("")
         return view
     }
 
