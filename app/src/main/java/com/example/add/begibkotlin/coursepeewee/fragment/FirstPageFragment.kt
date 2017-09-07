@@ -3,19 +3,15 @@ package com.example.add.begibkotlin.coursepeewee.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.app.ActionBar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import butterknife.BindView
 import butterknife.ButterKnife
-import butterknife.OnClick
 import com.bumptech.glide.Glide
 import com.example.add.begibkotlin.R
+import com.example.add.begibkotlin.R.*
 import com.example.add.begibkotlin.coursepeewee.activity.FirstPageActivity
 import com.example.add.begibkotlin.coursepeewee.toText
 
@@ -29,9 +25,9 @@ class FirstPageFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater!!.inflate(R.layout.fragment_first_page, container, false)
+        val view = inflater!!.inflate(layout.fragment_first_page, container, false)
         ButterKnife.bind(this,view)
-        Glide.with(this).load(R.drawable.shoot).crossFade().into(vImageBackground)
+        Glide.with(this).load(drawable.shoot).crossFade().into(vImageBackground)
         return view
     }
 
@@ -43,6 +39,8 @@ class FirstPageFragment : Fragment() {
 
         getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
     }
+
+
 
     companion object {
         fun newInstance(): FirstPageFragment {
