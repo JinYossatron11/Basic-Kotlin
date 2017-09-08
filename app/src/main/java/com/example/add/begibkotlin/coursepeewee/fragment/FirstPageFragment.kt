@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 import butterknife.BindView
 import butterknife.ButterKnife
+import butterknife.OnClick
 import com.bumptech.glide.Glide
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.R.*
@@ -16,7 +17,7 @@ import com.example.add.begibkotlin.coursepeewee.activity.FirstPageActivity
 import com.example.add.begibkotlin.coursepeewee.toText
 
 
-class FirstPageFragment : Fragment() {
+class FirstPageFragment : Fragment(){
 
     @BindView(R.id.edt_Username)lateinit var edtUsername: EditText
     @BindView(R.id.edt_Password)lateinit var edtPassword: EditText
@@ -28,16 +29,17 @@ class FirstPageFragment : Fragment() {
         val view = inflater!!.inflate(layout.fragment_first_page, container, false)
         ButterKnife.bind(this,view)
         Glide.with(this).load(drawable.shoot).crossFade().into(vImageBackground)
+
         return view
     }
 
     fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
 
-    fun nextPage() {
+   @OnClick(R.id.btn_Submit) fun nextPage() {
         val username = edtUsername.toText()
         val password = edtPassword.toText()
 
-        getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
+       getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
     }
 
 
