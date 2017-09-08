@@ -1,7 +1,9 @@
 package com.example.add.begibkotlin.coursepeewee.fragment
 
 
+import android.app.Dialog
 import android.os.Bundle
+import android.support.v4.app.DialogFragment
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,13 +31,21 @@ class FirstPageFragment : Fragment(){
         val view = inflater!!.inflate(layout.fragment_first_page, container, false)
         ButterKnife.bind(this,view)
         Glide.with(this).load(drawable.shoot).crossFade().into(vImageBackground)
-
+        loginCheck()
         return view
     }
 
     fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
-
-   @OnClick(R.id.btn_Submit) fun nextPage() {
+    fun loginCheck() {
+        btnSubmit.setOnClickListener {
+            if (edtUsername.length() == 1 && edtPassword.length() == 1) {
+                nextPage()
+            }else {
+                Toast.makeText(context, "เกิดข้อผิดพลาด", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+    fun nextPage() {
         val username = edtUsername.toText()
         val password = edtPassword.toText()
 
