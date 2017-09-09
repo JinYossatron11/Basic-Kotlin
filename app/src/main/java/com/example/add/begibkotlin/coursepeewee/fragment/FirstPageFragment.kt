@@ -39,10 +39,9 @@ class FirstPageFragment : Fragment(){
 
     fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
     fun loginCheck() {
-        var phoneNumber = "0968613128"
-        val password = "123456"
+
         btnSubmit.setOnClickListener {
-            if (edtUsername.text.equals(1) == edtPassword.text.equals(1)) {
+            if (edtUsername.length() == 10 && edtPassword.length() == 6){
                 nextPage()
             }else {
                 Toast.makeText(context, "เกิดข้อผิดพลาด", Toast.LENGTH_LONG).show()
