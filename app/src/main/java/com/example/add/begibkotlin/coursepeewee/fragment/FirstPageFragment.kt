@@ -5,6 +5,8 @@ import android.app.Dialog
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v4.app.Fragment
+import android.telephony.PhoneNumberFormattingTextWatcher
+import android.telephony.PhoneNumberUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,8 +39,10 @@ class FirstPageFragment : Fragment(){
 
     fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
     fun loginCheck() {
+        var phoneNumber = "0968613128"
+        val password = "123456"
         btnSubmit.setOnClickListener {
-            if (edtUsername.length() == 1 && edtPassword.length() == 1) {
+            if (edtUsername.text.equals(1) == edtPassword.text.equals(1)) {
                 nextPage()
             }else {
                 Toast.makeText(context, "เกิดข้อผิดพลาด", Toast.LENGTH_LONG).show()
