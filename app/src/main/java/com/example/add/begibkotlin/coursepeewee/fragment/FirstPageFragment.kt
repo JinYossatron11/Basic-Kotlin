@@ -13,7 +13,6 @@ import android.view.ViewGroup
 import android.widget.*
 import butterknife.BindView
 import butterknife.ButterKnife
-import butterknife.OnClick
 import com.bumptech.glide.Glide
 import com.example.add.begibkotlin.R
 import com.example.add.begibkotlin.R.*
@@ -41,7 +40,7 @@ class FirstPageFragment : Fragment(){
     fun loginCheck() {
 
         btnSubmit.setOnClickListener {
-            if (edtUsername.length() == 10 && edtPassword.length() == 6){
+            if (edtUsername.toText() == "0968613128" && edtPassword.toText() == "123456"){
                 nextPage()
             }else {
                 Toast.makeText(context, "เกิดข้อผิดพลาด", Toast.LENGTH_LONG).show()
