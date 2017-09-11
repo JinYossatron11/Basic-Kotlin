@@ -64,4 +64,15 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="TextViewBase" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextViewGrayishBrown" parent="TextViewBase">
+        <item name="android:textColor">@color/grayishBrown</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
 </resources>
