@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="news_feed">ข่าวสาร</string>
     <string name="phone_number">หมายเลขโทรศัพท์</string>
+    <string name="content_confirm">Confirm</string>
+    <string name="ok">ตกลง</string>
 </resources>
