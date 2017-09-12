@@ -19,10 +19,11 @@
         tools:text="aaaaaaaaaaaaaaaaa" />
     <LinearLayout
         android:id="@+id/infoBox"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
         android:layout_below="@+id/alert_message">
 
         <com.example.add.begibkotlin.coursepeewee.view.CustomFontTextView
@@ -31,9 +32,21 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textStyle="normal"
-            android:text="aaaaaaaaaaaaaaaaa"
-            style="@style/TextViewGrayishBrown"
-            />
+            android:text="aaaaaaaaaaaaaaa"
+            style="@style/TextViewGray" />
+        <com.example.add.begibkotlin.coursepeewee.view.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aaaaaaaaaaaaaaa"
+            style="@style/TextViewGray"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoBox"
+        android:gravity="center_horizontal">
 
     </LinearLayout>
 
