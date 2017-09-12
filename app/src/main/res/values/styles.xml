@@ -77,5 +77,9 @@
     <style name="TextViewGray" parent="TextViewBase">
         <item name="android:textColor">@color/colorGray</item>
     </style>
+    <style name="ButtonError" parent="ButtonBase">
+        <item name="android:background">@drawable/z_button_error</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
 </resources>

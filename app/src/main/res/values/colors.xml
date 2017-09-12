@@ -13,4 +13,5 @@
     <color name="disableCheckBox">#727272</color>
     <color name="grayishBrown">#4A4A4A</color>
     <color name="colorGray">#9B9B9B</color>
+    <color name="error">#C1272D</color>
 </resources>
