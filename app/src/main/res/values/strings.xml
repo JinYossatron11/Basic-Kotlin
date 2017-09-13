@@ -7,4 +7,5 @@
     <string name="phone_number">หมายเลขโทรศัพท์</string>
     <string name="content_confirm">Confirm</string>
     <string name="ok">ตกลง</string>
+    <string name="cancel_text">ยกเลิก</string>
 </resources>
