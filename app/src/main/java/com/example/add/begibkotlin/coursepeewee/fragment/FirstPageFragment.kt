@@ -34,12 +34,11 @@ class FirstPageFragment : Fragment(){
 
     fun getMainActivity(): FirstPageActivity { return activity as FirstPageActivity }
     fun loginCheck() {
-
         btnSubmit.setOnClickListener {
             if (edtUsername.toText() == "0968613128" && edtPassword.toText() == "123456"){
                 nextPage()
             }else {
-                Toast.makeText(context, "เกิดข้อผิดพลาด", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "qweqwewqeq", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -49,9 +48,6 @@ class FirstPageFragment : Fragment(){
 
        getMainActivity().changeFragment(Main2Fragment.newInstance(username, password))
     }
-
-
-
     companion object {
         fun newInstance(): FirstPageFragment {
             val bundle = Bundle()

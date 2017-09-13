@@ -8,4 +8,5 @@
     <string name="content_confirm">Confirm</string>
     <string name="ok">ตกลง</string>
     <string name="cancel_text">ยกเลิก</string>
+    <string name="exit_application">คุณต้องการออกจากแอปพลิเคชัน</string>
 </resources>
