@@ -11,7 +11,7 @@ dependencies:
         - echo y | android update sdk --no-ui --all --filter tools
         - echo y | android update sdk --no-ui --all --filter build-tools-26.0.1
 test:
-    overide:
-     - (./gradlew clean testDevDebugUnitTest --parallel):
-                timeout: 10000
+      post:
+        - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+        - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
         post:
