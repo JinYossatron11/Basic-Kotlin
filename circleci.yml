@@ -1,24 +1,15 @@
 general:
-    artifacts:
-        - /home/ubuntu/Basic-Kotlin/app/build/outputs/apk/
+        artifacts:
+             - /home/ubuntu/Basic-Kotlin/app/build/outputs/apk/
 
 machine:
-    environment:
-        ANDROID_HOME: /usr/local/android-sdk-linux
-        ADB_INSTALL_TIMEOUT: 240
-        GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx3072M -XX:+HeapDumpOnOutOfMemoryError"'
+        environment:
+            ANDROID_HOME: /usr/local/android-sdk-linux
 
 dependencies:
     pre:
-        - chmod +x gradlew
-        - touch app/google-services.json
-        - echo y | android update sdk --no-ui --all --filter "tools,android-25,build-tools-25.0.2,platform-tools,extra-android-m2repository,extra-android-support,extra-google-m2repository,extra-google-google_play_services"
-    cache_directories:
-        - /usr/local/android-sdk-linux/tools
-        - /usr/local/android-sdk-linux/build-tools/25.0.2
-
-    override:
-            - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,android-25,extra-google-m2repository,extra-android-support
+        - echo y | android update sdk --no-ui --all --filter build-tools-26.0.1
 test:
     overide:
      - (./gradlew clean testDevDebugUnitTest --parallel):
