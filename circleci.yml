@@ -1,0 +1,17 @@
+general:
+        artifacts:
+             - /home/ubuntu/AndroidRTR/app/build/outputs/apk/
+
+machine:
+        environment:
+            ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+    pre:
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,android-25,extra-google-m2repository,extra-android-support
+        - echo y | android update sdk --no-ui --all --filter build-tools-26.0.1
+test:
+    overide:
+     - (./gradlew clean testDevDebugUnitTest --parallel):
+                timeout: 10000
+        post:
