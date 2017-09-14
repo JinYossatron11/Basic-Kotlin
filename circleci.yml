@@ -1,6 +1,6 @@
 general:
         artifacts:
-             - /home/ubuntu/AndroidRTR/app/build/outputs/apk/
+             - /home/ubuntu/BasicKotlin/app/build/outputs/apk/
 
 machine:
         environment:
@@ -8,10 +8,12 @@ machine:
 
 dependencies:
     pre:
-        - echo y | android update sdk --no-ui --all --filter tools
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,android-25,extra-google-m2repository,extra-android-support
         - echo y | android update sdk --no-ui --all --filter build-tools-26.0.1
+        override:
+                    - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
 test:
-      post:
-        - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-        - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+    overide:
+     - (./gradlew clean testDevDebugUnitTest --parallel):
+                timeout: 10000
         post:
