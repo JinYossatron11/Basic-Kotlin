@@ -6,6 +6,9 @@ machine:
         environment:
             ANDROID_HOME: /usr/local/android-sdk-linux
 
+dependencies:
+    pre:
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,android-25,extra-google-m2repository,extra-android-support
 test:
     overide:
      - (./gradlew clean testDevDebugUnitTest --parallel):
