@@ -6,11 +6,6 @@ machine:
         environment:
             ANDROID_HOME: /usr/local/android-sdk-linux
 
-dependencies:
-    override:
-        - export TERM="dumb"; ./gradlew compileTestJava
-      cache_directories:
-        - ~/.gradle
 test:
     overide:
      - (./gradlew clean testDevDebugUnitTest --parallel):
