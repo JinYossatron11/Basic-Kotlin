@@ -9,4 +9,5 @@
     <string name="ok">ตกลง</string>
     <string name="cancel_text">ยกเลิก</string>
     <string name="exit_application">คุณต้องการออกจากแอปพลิเคชัน</string>
+    <string name="fail_data">ข้อมูลไม่ถูกต้อง</string>
 </resources>
