@@ -38,7 +38,7 @@ class FirstPageFragment : Fragment(){
             if (edtUsername.toText() == "0968613128" && edtPassword.toText() == "123456"){
                 nextPage()
             }else {
-                Toast.makeText(context, "ข้อมูลไม่ถูกต้อง", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "${R.string.fail_data}", Toast.LENGTH_LONG).show()
             }
         }
     }
